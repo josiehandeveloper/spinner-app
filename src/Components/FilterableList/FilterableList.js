@@ -4,10 +4,10 @@ import Context from "../../Context";
 export default class FilterableList extends Component {
   static contextType = Context;
   render() {
-    const items = this.context.content || [];
+    let items = this.context.content || [];
 
-    if (this.context.genre.value) {
-      items = items.filter((item) => item.genre === this.context.genre.value);
+    if (this.context.genre) {
+      items = items.filter((item) => item.genre === this.context.genre);
     }
 
     if (this.context.contentType !== "") {

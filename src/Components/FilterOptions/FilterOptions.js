@@ -31,13 +31,17 @@ export default class FilterOptions extends Component {
             <input
               type="radio"
               value="tvshow"
+              name="contentType"
               onChange={(e) => this.setState({ contentType: e.target.value })}
             />
             <span>TV Show</span>
           </div>
           <div className="FilterOptions__genre">
             <label htmlFor="genre">Select a genre:</label>
-            <select id="genre" onChange={(genre) => this.setState({ genre })}>
+            <select
+              id="genre"
+              onChange={(e) => this.setState({ genre: e.target.value })}
+            >
               <option value=""></option>
               {this.context.content.map((item) => {
                 return <option value={item.genre}>{item.genre}</option>;
