@@ -1,9 +1,12 @@
 import React, { Component } from "react";
-import FilterOptions from "./Components/FilterOptions/FilterOptions";
-import Header from "./Components/Header/Header";
-import FilterableList from "./Components/FilterableList/FilterableList";
-import "./index.js";
+import { Route } from "react-router-dom";
 import Context from "./Context";
+import NavBar from "./Components/NavBar/NavBar";
+import Register from "./Components/Register/Register";
+import Login from "./Components/Login/Login";
+import Header from "./Components/Header/Header";
+import FilterOptions from "./Components/FilterOptions/FilterOptions";
+import FilterableList from "./Components/FilterableList/FilterableList";
 
 class App extends Component {
   state = {
@@ -22,7 +25,13 @@ class App extends Component {
     return (
       <Context.Provider value={this.state}>
         <div className="App">
-          <Header />
+          <div className="App-header">
+            <Route path="/" component={NavBar} />
+            <Route path="/" component={Register} />
+            <Route path="/" component={Login} />
+            <Header />
+          </div>
+
           <FilterOptions />
           <FilterableList />
         </div>

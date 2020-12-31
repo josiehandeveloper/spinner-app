@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+.Nav {
+  float: right;
+  font-family: "Lato";
+  margin-right: 40px;
+}
+
+.navBarLink {
+  margin: 5px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: #383838;
+}

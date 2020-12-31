@@ -1,10 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import { BrowserRouter } from "react-router-dom";
-
-export const CONTENT = [
+const CONTENT = [
   {
     contentType: "movie",
     title: "AVA",
@@ -62,10 +56,3 @@ export const CONTENT = [
   { contentType: "tvshow", title: "Atypical", genre: "teen" },
   { contentType: "tvshow", title: "Mindhunter", genre: "thriller" },
 ];
-
-ReactDOM.render(
-  <BrowserRouter>
-    <App content={CONTENT} />,
-  </BrowserRouter>,
-  document.getElementById("root")
-);
