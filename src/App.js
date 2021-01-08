@@ -22,7 +22,6 @@ export default class App extends Component {
       e.preventDefault();
 
       let url = `https://api.themoviedb.org/3/search/movie?query=${this.state.searchTerm}&api_key=${config.API_KEY}`;
-
       fetch(url)
         .then((res) => res.json())
         .then((res) => this.setState({ movies: res.movies }));

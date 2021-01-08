@@ -5,20 +5,10 @@ import "./SearchBar.css";
 export default class FilterOptions extends Component {
   static contextType = Context;
 
-  state = {
-    searchTerm: "",
-  };
-
-  handleSubmit = (e) => {
-    e.preventDefault();
-    this.context.setSearchTerm(this.state.searchTerm);
-    this.context.handleSearch();
-  };
-
   render() {
     return (
       <div className="searchBar">
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={(e) => this.context.handleSearch(e)}>
           <div className="searchBox">
             <input
               style={{
@@ -30,7 +20,7 @@ export default class FilterOptions extends Component {
                 paddingLeft: 10,
               }}
               placeholder="Search Content"
-              onChange={(e) => this.setState({ searchTerm: e.target.value })}
+              onChange={(e) => this.context.setSearchTerm(e)}
             />
           </div>
           <input type="submit" value="Search" />
