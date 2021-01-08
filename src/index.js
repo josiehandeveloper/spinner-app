@@ -65,7 +65,7 @@ export const CONTENT = [
 
 ReactDOM.render(
   <BrowserRouter>
-    <App content={CONTENT} />,
+    <App />,
   </BrowserRouter>,
   document.getElementById("root")
 );

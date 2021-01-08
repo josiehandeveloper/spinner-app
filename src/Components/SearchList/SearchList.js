@@ -1,6 +1,23 @@
-import React, { Component } from "react";
+import React from "react";
 import Context from "../../Context";
 
+export default class SearchList extends React.Component {
+  static contextType = Context;
+  render() {
+    let movies = this.context.movies;
+    return (
+      <div className="SearchList">
+        {movies.map((movie) => (
+          <div>
+            <h3>{movie.title}</h3>
+          </div>
+        ))}
+      </div>
+    );
+  }
+}
+
+/*
 export default class FilterableList extends Component {
   static contextType = Context;
   render() {
@@ -27,3 +44,4 @@ export default class FilterableList extends Component {
     );
   }
 }
+*/

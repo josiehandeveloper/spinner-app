@@ -4,20 +4,28 @@ import Context from "./Context";
 import NavBar from "./Components/NavBar/NavBar";
 import Register from "./Components/Register/Register";
 import Login from "./Components/Login/Login";
-import Header from "./Components/Header/Header";
-import FilterOptions from "./Components/FilterOptions/FilterOptions";
-import FilterableList from "./Components/FilterableList/FilterableList";
+import SearchBar from "./Components/SearchBar/SearchBar";
+import SearchList from "./Components/SearchList/SearchList";
+import config from "./config";
 
-class App extends Component {
+export default class App extends Component {
   state = {
-    content: this.props.content,
-    genre: {},
-    contentType: "",
-    setGenre: (genre) => {
-      this.setState({ genre });
+    searchTerm: "",
+    movies: [],
+    setSearchTerm: (searchTerm) => {
+      this.setState({ searchTerm });
     },
-    setContentType: (contentType) => {
-      this.setState({ contentType });
+    setMovies: (movies) => {
+      this.setState({ movies });
+    },
+    handleSearch: (e) => {
+      e.preventDefault();
+
+      let url = `https://api.themoviedb.org/3/search/movie?query=${this.state.searchTerm}&api_key=${config.API_KEY}`;
+
+      fetch(url)
+        .then((res) => res.json())
+        .then((res) => this.setState({ movies: res.movies }));
     },
   };
 
@@ -27,17 +35,16 @@ class App extends Component {
         <div className="App">
           <div className="App-header">
             <Route path="/" component={NavBar} />
-            <Route path="/" component={Register} />
-            <Route path="/" component={Login} />
-            <Header />
           </div>
 
-          <FilterOptions />
-          <FilterableList />
+          <main>
+            <Route path="/register" component={Register} />
+            <Route path="/login" component={Login} />
+            <Route path="/dashboard" component={SearchBar} />
+            <Route path="/dashboard" component={SearchList} />
+          </main>
         </div>
       </Context.Provider>
     );
   }
 }
-
-export default App;

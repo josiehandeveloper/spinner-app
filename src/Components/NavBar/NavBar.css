@@ -1,17 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 
-.Nav {
-  float: right;
-  font-family: "Lato";
-  margin-right: 40px;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
 }
 
-.navBarLink {
-  margin: 5px;
+.nav_logo {
+  flex: 1;
+  top: 5px;
+  align-items: left;
+  width: 120px;
+  object-fit: contain;
+  margin-left: -5px;
+}
+
+.nav_link {
+  padding-top: 10px;
+  float: right;
+  font-family: "Lato";
+}
+
+.nav_logout {
+  font-family: "lato";
+}
+
+.nav_register {
+  padding-right: 10px;
+  padding-left: 5px;
 }
 
 a:link {
   text-decoration: none;
+  color: black;
 }
 
 a:visited {
