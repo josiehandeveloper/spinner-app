@@ -1,12 +1,12 @@
 import React from "react";
 import Context from "../../Context";
 
-export default class SearchList extends React.Component {
+export default class MyList extends React.Component {
   static contextType = Context;
 
   render() {
     const IMG_API = `https://image.tmdb.org/t/p/w1280`;
-    const movies = this.context.results;
+    const movies = this.context.movies;
     return (
       <div className="SearchList">
         {movies.map((movie) => (
@@ -16,9 +16,6 @@ export default class SearchList extends React.Component {
             <h3>{movie.title}</h3>
             <p>{movie.overview}</p>
             <p>{movie.vote_average}</p>
-            <button onClick={this.context.addMovieToList(movie)}>
-              Add to My list
-            </button>
           </div>
         ))}
       </div>

@@ -1,4 +1,18 @@
+.form {
+  display: grid;
+}
+
 .searchBox {
   font-size: 24;
   width: "99%";
+}
+
+.input {
+  font-size: 15;
+  display: "block";
+  width: "99%";
+  padding-top: 5;
+  padding-bottom: 5;
+  padding-left: 10;
+  border-radius: 20px;
 }

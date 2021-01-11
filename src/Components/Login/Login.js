@@ -1,6 +1,6 @@
 import React from "react";
-import AuthAPIService from "../Services/auth-api-service";
-import TokenService from "../Services/token-service";
+import AuthAPIService from "../../Services/auth-api-service";
+import TokenService from "../../Services/token-service";
 
 // import { API_BASE_URL } from "../../config";
 
@@ -16,6 +16,7 @@ export default class Login extends React.Component {
     AuthAPIService.loginUser(user)
       .then((loginResponse) => {
         TokenService.saveAuthToken(loginResponse.authToken);
+        this.context.getUserMovies();
         this.props.history.push("/dashboard");
       })
       .catch((res) => {

@@ -3,7 +3,7 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  position: sticky;
+  font-family: "lato";
 }
 
 .nav_logo {
@@ -15,14 +15,8 @@
   margin-left: -5px;
 }
 
-.nav_link {
-  padding-top: 10px;
-  float: right;
-  font-family: "Lato";
-}
-
-.nav_logout {
-  font-family: "lato";
+.authLinks {
+  padding: 20px;
 }
 
 .nav_register {

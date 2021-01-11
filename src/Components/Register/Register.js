@@ -1,5 +1,5 @@
 import React from "react";
-import AuthApiService from "../Services/auth-api-service";
+import AuthApiService from "../../Services/auth-api-service";
 import "./Register.css";
 
 export default class Register extends React.Component {

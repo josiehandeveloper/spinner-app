@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Context from "../../Context";
 import "./SearchBar.css";
 
-export default class FilterOptions extends Component {
+export default class SearchBar extends Component {
   static contextType = Context;
 
   render() {
@@ -11,19 +11,12 @@ export default class FilterOptions extends Component {
         <form onSubmit={(e) => this.context.handleSearch(e)}>
           <div className="searchBox">
             <input
-              style={{
-                fontSize: 15,
-                display: "block",
-                width: "99%",
-                paddingTop: 5,
-                paddingBottom: 5,
-                paddingLeft: 10,
-              }}
-              placeholder="Search Content"
-              onChange={(e) => this.context.setSearchTerm(e)}
+              className="input"
+              placeholder="i.e. Harry Potter"
+              onChange={(e) => this.context.handleChange(e)}
             />
           </div>
-          <input type="submit" value="Search" />
+          <input classname="button" type="submit" value="Search" />
         </form>
       </div>
     );
