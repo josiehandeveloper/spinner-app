@@ -16,7 +16,7 @@ export default class SearchBar extends Component {
               onChange={(e) => this.context.handleChange(e)}
             />
           </div>
-          <input classname="button" type="submit" value="Search" />
+          <input className="button" type="submit" value="Search" />
         </form>
       </div>
     );

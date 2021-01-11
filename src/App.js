@@ -10,7 +10,7 @@ import MyList from "./Components/MyList/MyList";
 import config from "./config";
 import TokenService from "./Services/token-service";
 
-//const popURL = `https://api.themoviedb.org/3/movie/popular?api_key=${config.API_KEY}`;
+//const popURL = `http://api.themoviedb.org/3/movie/popular?api_key=${config.API_KEY}`;
 
 export default class App extends Component {
   state = {
@@ -25,7 +25,7 @@ export default class App extends Component {
     },
     handleSearch: (e) => {
       e.preventDefault();
-      const searchURL = `https://api.themoviedb.org/3/search/movie?api_key=${config.API_KEY}&query=${this.state.searchTerm}`;
+      const searchURL = `http://api.themoviedb.org/3/search/movie?api_key=${config.API_KEY}&query=${this.state.searchTerm}`;
       fetch(searchURL)
         .then((res) => res.json())
         .then((data) => this.setState({ results: data.results }));
@@ -35,12 +35,14 @@ export default class App extends Component {
         headers: {
           Authorization: `Bearer ${TokenService.getAuthToken()}`,
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
         method: "POST",
         body: JSON.stringify(movie),
       })
         .then((res) => res.json())
         .then((newMovie) => {
+          console.log(this.state);
           this.setState({ movies: [...this.state.movies, newMovie] });
         });
     },
@@ -48,6 +50,7 @@ export default class App extends Component {
       fetch(`${config.API_BASE_URL}/api/movies`, {
         headers: {
           Authorization: `Bearer ${TokenService.getAuthToken()}`,
+          "Content-Type": "application/json",
         },
       })
         .then((res) => res.json())
@@ -57,11 +60,11 @@ export default class App extends Component {
     },
   };
 
-  componentDidMount() {
-    if (TokenService.hasAuthToken) {
-      this.state.getUserMovies();
-    }
-  }
+  // componentDidMount() {
+  //   if (TokenService.hasAuthToken) {
+  //     this.state.getUserMovies();
+  //   }
+  // }
 
   render() {
     return (

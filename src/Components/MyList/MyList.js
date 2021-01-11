@@ -9,15 +9,13 @@ export default class MyList extends React.Component {
     const movies = this.context.movies;
     return (
       <div className="SearchList">
-        {movies.map((movie) => (
-          <div>
-            <img alt="poster" width="200" src={IMG_API + movie.poster_path} />
+        <div>
+          <img alt="poster" width="200" src={IMG_API + movies.poster_path} />
 
-            <h3>{movie.title}</h3>
-            <p>{movie.overview}</p>
-            <p>{movie.vote_average}</p>
-          </div>
-        ))}
+          <h3>{movies.title}</h3>
+          <p>{movies.overview}</p>
+          <p>{movies.vote_average}</p>
+        </div>
       </div>
     );
   }
