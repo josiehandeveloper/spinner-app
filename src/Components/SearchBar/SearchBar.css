@@ -1,18 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
 .form {
   display: grid;
 }
 
-.searchBox {
-  font-size: 24;
-  width: "99%";
+.input {
+  font-size: 20px;
+  width: 40%;
+  font-family: lato;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 6px;
+  border: 1px solid black;
 }
 
-.input {
-  font-size: 15;
-  display: "block";
-  width: "99%";
-  padding-top: 5;
-  padding-bottom: 5;
-  padding-left: 10;
-  border-radius: 20px;
+.searchBox {
+  padding-left: 5px;
+  padding-right: 5px;
+  align-content: center;
+}
+
+.searchbtn {
+  border-radius: 15px;
+  font-family: lato;
 }
