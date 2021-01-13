@@ -15,8 +15,8 @@ export default class SearchBar extends Component {
               placeholder="i.e. Harry Potter"
               onChange={(e) => this.context.handleChange(e)}
             />
-            <input className="searchbtn" type="submit" value="Search" />
           </div>
+          <input className="searchbtn" type="submit" value="Search" />
         </form>
       </div>
     );

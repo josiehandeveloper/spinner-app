@@ -47,7 +47,8 @@ export default class App extends Component {
         });
     },
     getUserMovies: () => {
-      fetch(`${config.API_BASE_URL}/api/movies`, {
+      const { user_id } = TokenService.readJwtToken();
+      fetch(`${config.API_BASE_URL}/api/movies/${user_id}`, {
         headers: {
           Authorization: `Bearer ${TokenService.getAuthToken()}`,
           "Content-Type": "application/json",

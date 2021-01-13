@@ -15,6 +15,7 @@ export default class Register extends React.Component {
       name: name.value,
       email: email.value,
       password: password.value,
+      confirmPassword: confirmPassword.value,
     })
       .then((user) => {
         this.props.history.push("/login");

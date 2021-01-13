@@ -16,7 +16,7 @@ export default class Login extends React.Component {
     AuthAPIService.loginUser(user)
       .then((loginResponse) => {
         TokenService.saveAuthToken(loginResponse.authToken);
-        this.context.getUserMovies();
+        //this.context.getUserMovies();
         this.props.history.push("/dashboard");
       })
       .catch((res) => {
@@ -33,7 +33,7 @@ export default class Login extends React.Component {
         <input type="email" id="user_email" name="email" required="" />
 
         <label htmlFor="login_password">PASSWORD</label>
-        <input type="password" id="user_password" name="password" require="" />
+        <input type="password" id="user_password" name="password" required="" />
 
         <button type="submit" id="login_button">
           Submit
