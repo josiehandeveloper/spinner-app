@@ -1,26 +1,83 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela&display=swap");
 
-.form {
-  display: grid;
+.search-container {
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  width: 100%;
+  position: relative;
+  background-image: url(../../images/movie.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.search-container h1 {
+  color: white;
+  position: absolute;
+  font-family: Lato;
+  font-size: 60px;
+  letter-spacing: 4px;
+  text-align: left;
+  margin-left: 3rem;
+  margin-top: 5rem;
+}
+
+.searchBar p {
+  padding-top: 15%;
+  font-family: varela;
+  font-size: 40px;
+  letter-spacing: 4px;
+  text-align: center;
+  color: white;
 }
 
 .input {
-  font-size: 20px;
-  width: 40%;
-  font-family: lato;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  border-radius: 6px;
-  border: 1px solid black;
+  position: absolute;
+  top: 20%;
+  bottom: 80%;
+  font-family: Lato;
+  padding-top: 1%;
+  font-size: 34px;
+  text-align: left;
+  padding-top: 25px;
+  padding-bottom: 33px;
+  margin-left: 3rem;
+  margin-top: 5rem;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 3px solid white;
+  color: white;
+  cursor: pointer;
+  width: 20rem;
 }
 
-.searchBox {
-  padding-left: 5px;
-  padding-right: 5px;
-  align-content: center;
+::placeholder {
+  color: gray;
 }
 
 .searchbtn {
-  border-radius: 15px;
-  font-family: lato;
+  position: absolute;
+  top: 20%;
+  bottom: 80%;
+  font-family: Lato;
+  padding-top: 1%;
+  font-size: 34px;
+  text-align: left;
+  padding-left: 5px;
+  padding-top: 7px;
+  padding-bottom: 50px;
+  margin-left: 25rem;
+  margin-top: 5rem;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 3px solid white;
+  color: white;
+  cursor: pointer;
+  transition: color 250ms;
+}
+
+.searchbtn:hover {
+  color: #383838;
 }

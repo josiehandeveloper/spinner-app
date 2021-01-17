@@ -7,17 +7,22 @@ export default class SearchBar extends Component {
 
   render() {
     return (
-      <div className="searchBar">
-        <form onSubmit={(e) => this.context.handleSearch(e)}>
-          <div className="searchBox">
-            <input
-              className="input"
-              placeholder="i.e. Harry Potter"
-              onChange={(e) => this.context.handleChange(e)}
-            />
+      <div className="search-container">
+        <div className="search-wrapper">
+          <div className="searchBar">
+            <form onSubmit={(e) => this.context.handleSearch(e)}>
+              <h1> What Will You Watch? </h1>
+              <div className="searchBox">
+                <input
+                  className="input"
+                  placeholder="i.e. Harry Potter"
+                  onChange={(e) => this.context.handleChange(e)}
+                />
+                <input className="searchbtn" type="submit" value="Search" />
+              </div>
+            </form>
           </div>
-          <input className="searchbtn" type="submit" value="Search" />
-        </form>
+        </div>
       </div>
     );
   }

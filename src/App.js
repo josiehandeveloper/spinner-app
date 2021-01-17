@@ -8,15 +8,16 @@ import SearchBar from "./Components/SearchBar/SearchBar";
 import SearchList from "./Components/SearchList/SearchList";
 import MyList from "./Components/MyList/MyList";
 import config from "./config";
-import TokenService from "./Services/token-service";
-
-//const popURL = `http://api.themoviedb.org/3/movie/popular?api_key=${config.API_KEY}`;
+import TokenService from "./services/token-service";
+import Homepage from "./Homepage/homepage";
+import Footer from "./Components/Footer/Footer";
 
 export default class App extends Component {
   state = {
     searchTerm: "",
     results: [],
     movies: [],
+    homepage: [],
     setResults: (results) => {
       this.setState({ results });
     },
@@ -35,20 +36,32 @@ export default class App extends Component {
         headers: {
           Authorization: `Bearer ${TokenService.getAuthToken()}`,
           "Content-Type": "application/json",
-          Accept: "application/json",
         },
         method: "POST",
         body: JSON.stringify(movie),
       })
         .then((res) => res.json())
         .then((newMovie) => {
-          console.log(this.state);
           this.setState({ movies: [...this.state.movies, newMovie] });
         });
     },
+
+    deleteMovie: (movieId) => {
+      fetch(`${config.API_BASE_URL}/api/movies`, {
+        headers: {
+          Authorization: `Bearer ${TokenService.getAuthToken()}`,
+          "Content-Type": "application/json",
+        },
+        method: "DELETE",
+        body: JSON.stringify({ movie_id: movieId }),
+      }).then(() => {
+        this.setState({
+          movies: this.state.movies.filter((m) => m.id !== movieId),
+        });
+      });
+    },
     getUserMovies: () => {
-      const { user_id } = TokenService.readJwtToken();
-      fetch(`${config.API_BASE_URL}/api/movies/${user_id}`, {
+      fetch(`${config.API_BASE_URL}/api/movies`, {
         headers: {
           Authorization: `Bearer ${TokenService.getAuthToken()}`,
           "Content-Type": "application/json",
@@ -59,13 +72,21 @@ export default class App extends Component {
           this.setState({ movies });
         });
     },
+    getHomePage: () => {
+      fetch(
+        `https://api.themoviedb.org/3/movie/popular?api_key=${config.API_KEY}`
+      )
+        .then((res) => res.json())
+        .then((data) => this.setState({ homepage: data.results }));
+    },
   };
 
-  // componentDidMount() {
-  //   if (TokenService.hasAuthToken) {
-  //     this.state.getUserMovies();
-  //   }
-  // }
+  componentDidMount() {
+    this.state.getHomePage();
+    if (TokenService.hasAuthToken) {
+      this.state.getUserMovies();
+    }
+  }
 
   render() {
     return (
@@ -76,12 +97,16 @@ export default class App extends Component {
           </div>
 
           <main>
+            <Route exact path="/" component={Homepage} />
             <Route path="/register" component={Register} />
             <Route path="/login" component={Login} />
             <Route path="/movies" component={MyList} />
             <Route path="/dashboard" component={SearchBar} />
             <Route path="/dashboard" component={SearchList} />
           </main>
+          <div className="App-footer">
+            <Route path="/" component={Footer} />
+          </div>
         </div>
       </Context.Provider>
     );

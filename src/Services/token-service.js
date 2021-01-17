@@ -1,6 +1,6 @@
 import config from "../config";
 
-const TokenService = {
+export default {
   saveAuthToken(token) {
     window.localStorage.setItem(config.TOKEN_KEY, token);
   },
@@ -8,14 +8,12 @@ const TokenService = {
     return window.localStorage.getItem(config.TOKEN_KEY);
   },
   hasAuthToken() {
-    return !!TokenService.getAuthToken();
+    return !!this.getAuthToken();
   },
   clearAuthToken() {
     window.localStorage.removeItem(config.TOKEN_KEY);
   },
-  readJwtToken() {
-    return TokenService.parseJwt(TokenService.getAuthToken());
-  },
+  // readJwtToken() {
+  //   return this.parseJwt(this.getAuthToken());
+  // },
 };
-
-export default TokenService;

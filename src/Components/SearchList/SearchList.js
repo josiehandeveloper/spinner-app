@@ -9,20 +9,37 @@ export default class SearchList extends React.Component {
     const IMG_API = `http://image.tmdb.org/t/p/w1280`;
     const movies = this.context.results;
     return (
-      <div className="container">
-        {movies.map((movie) => (
-          <div key={movie.id}>
-            <img alt="poster" width="250" src={IMG_API + movie.poster_path} />
-            <div className="movie-info">
-              <h3>{movie.title}</h3>
-              <p>{movie.overview}</p>
-              <p>{movie.vote_average}</p>
+      <div className="movie-container">
+        {movies
+          .filter((movie) => movie.poster_path)
+          .map((movie) => (
+            <div className="movie" key={movie.id}>
+              <img
+                className="movie-image"
+                alt="poster"
+                width="250"
+                src={IMG_API + movie.poster_path}
+              />
+              <div className="movie-info">
+                <h3 className="movie-title">{movie.title}</h3>
+                <p>
+                  <small>Release Date: {movie.release_date}</small>
+                </p>
+                <p>
+                  <small>Rating: {movie.vote_average}</small>
+                </p>
+                <p>
+                  <small>Overview: {movie.overview}</small>
+                </p>
+                <button
+                  className="addbtn"
+                  onClick={() => this.context.addMovieToList(movie)}
+                >
+                  Add to My List
+                </button>
+              </div>
             </div>
-            <button onClick={() => this.context.addMovieToList(movie)}>
-              Add to My list
-            </button>
-          </div>
-        ))}
+          ))}
       </div>
     );
   }

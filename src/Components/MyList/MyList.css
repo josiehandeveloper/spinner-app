@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+.list h1 {
+  font-family: lato;
+  font-size: 40px;
+  color: #749e86;
+}
+
+.list-container {
+  padding-top: 5%;
+  padding-left: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-left: 7rem;
+}
+
+.img {
+  max-width: 100%;
+  padding-right: 5px;
+}
+
+.movie {
+  background-color: 0, 0, 0, 0.2;
+  margin: 2rem;
+  width: 250px;
+  border-radius: 3px;
+  box-shadow: 3 px 3 px 5 px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  text-align: center;
+}
+
+.releasedate {
+  font-size: 16px;
+}
+
+.movie-info {
+  margin: 1rem;
+  text-align: center;
+}
+
+.movie-info h3 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.deletebtn {
+  background-color: #749e86;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: #749e86;
+  width: 100%;
+  margin-top: 1em;
+  padding: 8px 0px;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+  cursor: pointer;
+  transition: color 250ms;
+}
+
+.deletebtn:hover {
+  color: #383838;
+}

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../images/Logo.png";
 import "./NavBar.css";
-import TokenService from "../../Services/token-service";
+import TokenService from "../../services/token-service";
 
 export default class NavBar extends Component {
   logout = () => {
@@ -23,6 +23,9 @@ export default class NavBar extends Component {
               onClick={() => this.logout()}
             >
               Logout
+            </Link>
+            <Link className="findMovies" to="/dashboard">
+              Find Movies
             </Link>
             <Link className="mylist" to="/movies">
               My List

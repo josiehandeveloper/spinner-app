@@ -1,0 +1,12 @@
+.footer-container {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+
+  text-align: center;
+}
+
+.footer-wrap {
+  flex: 1;
+}

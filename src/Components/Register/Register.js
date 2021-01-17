@@ -1,5 +1,5 @@
 import React from "react";
-import AuthApiService from "../../Services/auth-api-service";
+import AuthApiService from "../../services/auth-api-service";
 import "./Register.css";
 
 export default class Register extends React.Component {
@@ -27,36 +27,48 @@ export default class Register extends React.Component {
 
   render() {
     return (
-      <form className="form_register" onSubmit={this.handleSubmit}>
-        {this.state.error && <p className="error">{this.state.error}</p>}
-        <h3>Register</h3>
-        <div>
-          <label htmlFor="register_email">EMAIL</label>
-          <input type="email" id="register_email" name="email" required="" />
-        </div>
-        <div>
-          <label htmlFor="register_password">PASSWORD</label>
-          <input
-            type="password"
-            id="register_password"
-            name="password"
-            required=""
-          />
-        </div>
-        <div>
-          <label htmlFor="confirm_password"> CONFIRM PASSWORD</label>
-          <input
-            type="password"
-            id="confirm_password"
-            name="confirmPassword"
-            required=""
-          />
-        </div>
+      <div className="wrapper">
+        <div className="form-wrapper">
+          <form onSubmit={this.handleSubmit} className="form-container">
+            {this.state.error && <p className="error">{this.state.error}</p>}
+            <h1>Register</h1>
 
-        <button type="submit" id="register_button">
-          SUBMIT
-        </button>
-      </form>
+            <label htmlFor="register_email">EMAIL</label>
+            <input
+              className="email"
+              type="email"
+              id="register_email"
+              name="email"
+              required=""
+            />
+
+            <div>
+              <label htmlFor="register_password">PASSWORD</label>
+              <input
+                type="password"
+                className="password"
+                id="register_password"
+                name="password"
+                required=""
+              />
+            </div>
+            <div>
+              <label htmlFor="confirm"> CONFIRM PASSWORD</label>
+              <input
+                type="confirm"
+                className="confirm"
+                id="confirm_password"
+                name="confirmPassword"
+                required=""
+              />
+            </div>
+
+            <button className="submit" type="submit" id="register_button">
+              SUBMIT
+            </button>
+          </form>
+        </div>
+      </div>
     );
   }
 }
