@@ -7,7 +7,7 @@
   flex-direction: column;
   height: 75vh;
   position: relative;
-  background-image: url(../images/movie.png);
+  background-image: url(../../images/movie.png);
   background-size: cover;
   background-position: center;
   padding: 0;

@@ -9,7 +9,7 @@ import SearchList from "./Components/SearchList/SearchList";
 import MyList from "./Components/MyList/MyList";
 import config from "./config";
 import TokenService from "./services/token-service";
-import Homepage from "./Homepage/homepage";
+import Homepage from "./Components/Homepage/homepage";
 import Footer from "./Components/Footer/Footer";
 
 export default class App extends Component {

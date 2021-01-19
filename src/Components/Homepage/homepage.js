@@ -1,5 +1,5 @@
 import React from "react";
-import Context from "../Context";
+import Context from "../../Context";
 import "./homepage.css";
 
 export default class Homepage extends React.Component {
