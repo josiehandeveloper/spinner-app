@@ -6,7 +6,7 @@ export default class SearchList extends React.Component {
   static contextType = Context;
 
   render() {
-    const IMG_API = `http://image.tmdb.org/t/p/w1280`;
+    const IMG_API = `https://image.tmdb.org/t/p/w1280`;
     const movies = this.context.results;
     return (
       <div className="movie-container">
@@ -22,9 +22,6 @@ export default class SearchList extends React.Component {
               />
               <div className="movie-info">
                 <h3 className="movie-title">{movie.title}</h3>
-                <p>
-                  <small>Release Date: {movie.release_date}</small>
-                </p>
                 <p>
                   <small>Rating: {movie.vote_average}</small>
                 </p>

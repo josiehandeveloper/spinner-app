@@ -11,18 +11,18 @@ const Footer = () => {
         <div className="row">
           <p className="col-sm">
             <a className="link" href="mailto:jsphnhan@gmail.com">
-              <img src={gmailLogo} width="22" />
+              <img src={gmailLogo} width="22" alt="email" />
             </a>{" "}
             |{" "}
             <a className="link" href="https://github.com/josiehandeveloper">
-              <img src={githubLogo} width="20" />
+              <img src={githubLogo} width="20" alt="github" />
             </a>{" "}
             |{" "}
             <a
               className="link"
               href="https://www.linkedin.com/in/josephine-han/"
             >
-              <img src={linkedInLogo} width="24" />
+              <img src={linkedInLogo} width="24" alt="linkedIn" />
             </a>
           </p>
         </div>

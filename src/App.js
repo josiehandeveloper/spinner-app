@@ -26,13 +26,13 @@ export default class App extends Component {
     },
     handleSearch: (e) => {
       e.preventDefault();
-      const searchURL = `http://api.themoviedb.org/3/search/movie?api_key=${config.API_KEY}&query=${this.state.searchTerm}`;
+      const searchURL = `https://api.themoviedb.org/3/search/movie?api_key=${config.API_KEY}&query=${this.state.searchTerm}`;
       fetch(searchURL)
         .then((res) => res.json())
         .then((data) => this.setState({ results: data.results }));
     },
     addMovieToList: (movie) => {
-      fetch(`${config.API_BASE_URL}/api/movies`, {
+      fetch(`${config.API_ENDPOINT}/api/movies`, {
         headers: {
           Authorization: `Bearer ${TokenService.getAuthToken()}`,
           "Content-Type": "application/json",
@@ -47,7 +47,7 @@ export default class App extends Component {
     },
 
     deleteMovie: (movieId) => {
-      fetch(`${config.API_BASE_URL}/api/movies`, {
+      fetch(`${config.API_ENDPOINT}/api/movies`, {
         headers: {
           Authorization: `Bearer ${TokenService.getAuthToken()}`,
           "Content-Type": "application/json",
@@ -61,7 +61,7 @@ export default class App extends Component {
       });
     },
     getUserMovies: () => {
-      fetch(`${config.API_BASE_URL}/api/movies`, {
+      fetch(`${config.API_ENDPOINT}/api/movies`, {
         headers: {
           Authorization: `Bearer ${TokenService.getAuthToken()}`,
           "Content-Type": "application/json",

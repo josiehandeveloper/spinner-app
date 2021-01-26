@@ -17,8 +17,9 @@ export default class MyList extends React.Component {
               <img alt="poster" width="250" src={IMG_API + movie.poster_path} />
               <div className="movie-info">
                 <h3>{movie.title}</h3>
+                <p>Rating: {movie.vote_average}</p>
                 <p>{movie.overview}</p>
-                <p>{movie.vote_average}</p>
+
                 <button
                   className="deletebtn"
                   onClick={() => this.context.deleteMovie(movie.id)}
