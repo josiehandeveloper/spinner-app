@@ -56,3 +56,36 @@ a:visited {
 a:hover {
   color: #383838;
 }
+
+@media all and (max-width: 500px) {
+  .nav {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Lato", sans-serif;
+  }
+  .nav_logo {
+    flex: 1;
+    top: 5px;
+    align-items: left;
+    width: 120px;
+    object-fit: contain;
+    margin-left: -15px;
+  }
+  .authLinks {
+    font-family: "lato", sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+    margin-left: -5rem;
+  }
+  .nav_link {
+    padding: 30px;
+    font-family: Lato;
+    font-weight: lighter;
+    font-size: 15px;
+  }
+  .findMovies {
+    padding-right: 10px;
+  }
+}
