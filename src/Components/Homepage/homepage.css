@@ -120,6 +120,16 @@ p {
 
 @media all and (max-width: 500px) {
   .about p {
-    font-size: 20px;
+    font-size: 24px;
+  }
+  .container h1 {
+    color: white;
+    position: absolute;
+    font-family: Lato;
+    font-size: 40px;
+    letter-spacing: 4px;
+    text-align: left;
+    margin-left: 3rem;
+    margin-top: 5rem;
   }
 }
