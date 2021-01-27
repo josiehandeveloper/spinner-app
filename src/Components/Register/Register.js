@@ -46,7 +46,7 @@ export default class Register extends React.Component {
               <label htmlFor="register_password">PASSWORD</label>
               <input
                 type="password"
-                className="password"
+                className="register_password"
                 id="register_password"
                 name="password"
                 required=""
@@ -55,8 +55,8 @@ export default class Register extends React.Component {
             <div>
               <label htmlFor="confirm"> CONFIRM PASSWORD</label>
               <input
-                type="confirm"
-                className="confirm"
+                type="password"
+                className="confirm_password"
                 id="confirm_password"
                 name="confirmPassword"
                 required=""
