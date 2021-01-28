@@ -8,7 +8,6 @@
   height: 75vh;
   position: relative;
   background-image: url(../../images/movie.png);
-
   background-position: center;
   padding: 0;
   margin: 0;
@@ -121,6 +120,17 @@ p {
 @media all and (max-width: 500px) {
   .about p {
     font-size: 24px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+    position: relative;
+    background-image: url(../../images/movie.png);
+    background-position: center;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
   }
   .container h1 {
     color: white;

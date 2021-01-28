@@ -82,24 +82,34 @@
 }
 
 @media all and (max-width: 500px) {
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+    width: 100%;
+    position: relative;
+    background-image: url(../../images/movie.png);
+    background-size: cover;
+    background-position: center;
+  }
+
   .search-container h1 {
     color: white;
     position: absolute;
     font-family: Lato;
-    font-size: 35px;
+    font-size: 34px;
     letter-spacing: 4px;
     text-align: left;
     margin-left: 2rem;
-
-    margin-top: 5rem;
+    margin-top: 1rem;
   }
   .input {
     position: absolute;
-    top: 30%;
-    bottom: 70%;
+    top: 7%;
+    bottom: 80%;
     font-family: Lato;
     padding-top: 1%;
-    font-size: 30px;
+    font-size: 28px;
     text-align: left;
     padding-top: 22px;
     padding-bottom: 30px;
@@ -113,16 +123,19 @@
     width: 15rem;
   }
   .searchbtn {
-    top: 40%;
-    bottom: 60%;
+    top: 54%;
+    bottom: 40%;
     font-family: Lato;
     padding-top: 1%;
-    font-size: 30px;
-    text-align: left;
-    padding-left: 5px;
+    font-size: 23px;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
     padding-top: 1px;
-    padding-bottom: 40px;
+    padding-bottom: 35px;
+    width: 17rem;
     margin-left: 2rem;
+    margin-right: 2rem;
     margin-top: 7rem;
     background-color: transparent;
     border-radius: 5px;
