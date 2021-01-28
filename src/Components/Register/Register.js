@@ -9,10 +9,15 @@ export default class Register extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { name, email, password, confirmPassword } = e.target;
+    const { email, password, confirmPassword } = e.target;
     this.setState({ error: null });
+
+    if (password.value !== confirmPassword.value) {
+      return this.setState({
+        error: "Please enter matching passwords",
+      });
+    }
     AuthApiService.postUser({
-      name: name.value,
       email: email.value,
       password: password.value,
       confirmPassword: confirmPassword.value,

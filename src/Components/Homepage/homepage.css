@@ -82,7 +82,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: -5%;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
 .img {
@@ -129,7 +129,6 @@ p {
     font-size: 40px;
     letter-spacing: 4px;
     text-align: left;
-    margin-left: 0.5rem;
     margin-right: auto;
     margin-top: 2rem;
   }

@@ -59,7 +59,7 @@ input {
 }
 
 input.error {
-  border: 1px solid red;
+  color: 1px solid red;
 }
 
 .submit {

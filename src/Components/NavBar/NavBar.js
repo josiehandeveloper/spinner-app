@@ -12,9 +12,15 @@ export default class NavBar extends Component {
   render() {
     return (
       <div className="nav">
-        <Link to="/">
-          <img className="nav_logo" src={Logo} alt="website logo/homepage" />
-        </Link>
+        {TokenService.hasAuthToken() ? (
+          <Link to="/dashboard">
+            <img className="nav_logo" src={Logo} alt="website logo/homepage" />
+          </Link>
+        ) : (
+          <Link to="/">
+            <img className="nav_logo" src={Logo} alt="website logo/homepage" />
+          </Link>
+        )}
         {TokenService.hasAuthToken() ? (
           <div className="authLinks">
             <Link
@@ -24,10 +30,10 @@ export default class NavBar extends Component {
             >
               Logout
             </Link>
-            <Link className="findMovies" to="/dashboard">
+            <Link to="/dashboard" className="findMovies">
               Find Movies
             </Link>
-            <Link className="mylist" to="/movies">
+            <Link to="/movies" className="mylist">
               My List
             </Link>
           </div>

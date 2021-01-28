@@ -14,7 +14,7 @@ import Footer from "./Components/Footer/Footer";
 
 export default class App extends Component {
   state = {
-    searchTerm: "",
+    searchTerm: "Harry Potter",
     results: [],
     movies: [],
     homepage: [],

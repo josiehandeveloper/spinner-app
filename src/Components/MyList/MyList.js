@@ -18,7 +18,6 @@ export default class MyList extends React.Component {
               <div className="movie-info">
                 <h3>{movie.title}</h3>
                 <p>Rating: {movie.vote_average}</p>
-                <p>{movie.overview}</p>
 
                 <button
                   className="deletebtn"
