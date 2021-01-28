@@ -33,7 +33,7 @@ export default class SearchList extends React.Component {
                   className="movie-image"
                   alt="poster"
                   width="250"
-                  height="350"
+                  height="370"
                   src={IMG_API + movie.poster_path}
                 />
                 <div className="movie-info">

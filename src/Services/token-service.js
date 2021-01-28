@@ -13,7 +13,4 @@ export default {
   clearAuthToken() {
     window.localStorage.removeItem(config.TOKEN_KEY);
   },
-  // readJwtToken() {
-  //   return this.parseJwt(this.getAuthToken());
-  // },
 };
