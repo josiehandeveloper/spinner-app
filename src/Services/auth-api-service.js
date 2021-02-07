@@ -1,6 +1,6 @@
 import config from "../config";
 
-export default {
+const AuthAPIService = {
   postUser(user) {
     return fetch(`${config.API_BASE_URL}/api/users`, {
       method: "POST",
@@ -24,3 +24,5 @@ export default {
     );
   },
 };
+
+export default AuthAPIService;

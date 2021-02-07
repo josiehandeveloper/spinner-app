@@ -1,6 +1,6 @@
 import React from "react";
 import Context from "../../Context";
-import "./homepage.css";
+import "./Homepage.css";
 
 export default class Homepage extends React.Component {
   static contextType = Context;

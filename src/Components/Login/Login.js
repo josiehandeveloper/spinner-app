@@ -1,11 +1,11 @@
 import React from "react";
 import AuthAPIService from "../../services/auth-api-service";
 import TokenService from "../../services/token-service";
+import Context from "../../Context";
 import "./Login.css";
 
-// import { API_BASE_URL } from "../../config";
-
 export default class Login extends React.Component {
+  static contextType = Context;
   state = {
     error: null,
   };

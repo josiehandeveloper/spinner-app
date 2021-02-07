@@ -9,7 +9,7 @@ import SearchList from "./Components/SearchList/SearchList";
 import MyList from "./Components/MyList/MyList";
 import config from "./config";
 import TokenService from "./services/token-service";
-import Homepage from "./Components/Homepage/homepage";
+import Homepage from "./Components/Homepage/Homepage";
 import Footer from "./Components/Footer/Footer";
 
 export default class App extends Component {
@@ -24,6 +24,7 @@ export default class App extends Component {
     handleChange: (e) => {
       this.setState({ searchTerm: e.target.value });
     },
+    /*For the dashboard */
     handleSearch: (e) => {
       e.preventDefault();
       const searchURL = `https://api.themoviedb.org/3/search/movie?api_key=${config.API_KEY}&query=${this.state.searchTerm}`;
@@ -31,6 +32,7 @@ export default class App extends Component {
         .then((res) => res.json())
         .then((data) => this.setState({ results: data.results }));
     },
+    /* For Searchbar */
     addMovieToList: (movie) => {
       fetch(`${config.API_BASE_URL}/api/movies`, {
         headers: {
@@ -60,6 +62,7 @@ export default class App extends Component {
         });
       });
     },
+    /* My List */
     getUserMovies: () => {
       fetch(`${config.API_BASE_URL}/api/movies`, {
         headers: {
@@ -72,6 +75,7 @@ export default class App extends Component {
           this.setState({ movies });
         });
     },
+    /* Homepage */
     getHomePage: () => {
       fetch(
         `https://api.themoviedb.org/3/movie/popular?api_key=${config.API_KEY}`
