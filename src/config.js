@@ -4,4 +4,5 @@ module.exports = {
   TOKEN_KEY: "watchit-app-token",
   API_ENDPOINT: "https://desolate-inlet-52459.herokuapp.com",
   API_KEY: process.env.REACT_APP_API_KEY || "3dbc1bc5de0aea0ac4c73f5bc75d2b16",
+  DB_URL: "postgresql://josephinehan@localhost/watchit",
 };

@@ -32,7 +32,7 @@ export default class App extends Component {
         .then((data) => this.setState({ results: data.results }));
     },
     addMovieToList: (movie) => {
-      fetch(`${config.API_ENDPOINT}/api/movies`, {
+      fetch(`${config.API_BASE_URL}/api/movies`, {
         headers: {
           Authorization: `Bearer ${TokenService.getAuthToken()}`,
           "Content-Type": "application/json",
@@ -47,7 +47,7 @@ export default class App extends Component {
     },
 
     deleteMovie: (movieId) => {
-      fetch(`${config.API_ENDPOINT}/api/movies`, {
+      fetch(`${config.API_BASE_URL}/api/movies`, {
         headers: {
           Authorization: `Bearer ${TokenService.getAuthToken()}`,
           "Content-Type": "application/json",
@@ -61,7 +61,7 @@ export default class App extends Component {
       });
     },
     getUserMovies: () => {
-      fetch(`${config.API_ENDPOINT}/api/movies`, {
+      fetch(`${config.API_BASE_URL}/api/movies`, {
         headers: {
           Authorization: `Bearer ${TokenService.getAuthToken()}`,
           "Content-Type": "application/json",

@@ -1,7 +1,4 @@
 import React from "react";
-import githubLogo from "../../images/githubLogo.png";
-import gmailLogo from "../../images/gmailLogo.png";
-import linkedInLogo from "../../images/linkedInLogo.png";
 import "./Footer.css";
 
 const Footer = () => {
@@ -11,18 +8,18 @@ const Footer = () => {
         <div className="row">
           <p className="col-sm">
             <a className="link" href="mailto:jsphnhan@gmail.com">
-              <img src={gmailLogo} width="22" alt="email" />
+              <i className="fas fa-envelope-square"></i>
             </a>{" "}
             |{" "}
             <a className="link" href="https://github.com/josiehandeveloper">
-              <img src={githubLogo} width="20" alt="github" />
+              <i className="fab fa-github"></i>
             </a>{" "}
             |{" "}
             <a
               className="link"
               href="https://www.linkedin.com/in/josephine-han/"
             >
-              <img src={linkedInLogo} width="24" alt="linkedIn" />
+              <i className="fab fa-linkedin-in"></i>
             </a>
           </p>
         </div>
