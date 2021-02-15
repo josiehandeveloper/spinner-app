@@ -64,7 +64,7 @@ export default class App extends Component {
     },
     /* My List */
     getUserMovies: () => {
-      fetch(`${config.API_ENDPOINTL}/api/movies`, {
+      fetch(`${config.API_ENDPOINT}/api/movies`, {
         headers: {
           Authorization: `Bearer ${TokenService.getAuthToken()}`,
           "Content-Type": "application/json",
