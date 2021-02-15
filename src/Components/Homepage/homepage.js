@@ -10,7 +10,7 @@ export default class Homepage extends React.Component {
 
   render() {
     const IMG_API = `https://image.tmdb.org/t/p/w1280`;
-    const { movies = [] } = this.context.homepage || [];
+    const { homepage = [] } = this.context || [];
     return (
       <div className="homepage">
         <div className="container">
@@ -31,7 +31,7 @@ export default class Homepage extends React.Component {
           </p>
         </div>
         <div className="movie-container">
-          {movies.map((movie) => (
+          {homepage.map((movie) => (
             <div className="movie" key={movie.id}>
               <img
                 className="movie-image"
