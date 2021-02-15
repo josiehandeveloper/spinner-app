@@ -34,7 +34,7 @@ export default class App extends Component {
     },
     /* For Searchbar */
     addMovieToList: (movie) => {
-      fetch(`${config.API_BASE_URL}/api/movies`, {
+      fetch(`${config.API_ENDPOINT}/api/movies`, {
         headers: {
           Authorization: `Bearer ${TokenService.getAuthToken()}`,
           "Content-Type": "application/json",
@@ -49,7 +49,7 @@ export default class App extends Component {
     },
 
     deleteMovie: (movieId) => {
-      fetch(`${config.API_BASE_URL}/api/movies`, {
+      fetch(`${config.API_ENDPOINT}/api/movies`, {
         headers: {
           Authorization: `Bearer ${TokenService.getAuthToken()}`,
           "Content-Type": "application/json",
@@ -64,7 +64,7 @@ export default class App extends Component {
     },
     /* My List */
     getUserMovies: () => {
-      fetch(`${config.API_BASE_URL}/api/movies`, {
+      fetch(`${config.API_ENDPOINTL}/api/movies`, {
         headers: {
           Authorization: `Bearer ${TokenService.getAuthToken()}`,
           "Content-Type": "application/json",

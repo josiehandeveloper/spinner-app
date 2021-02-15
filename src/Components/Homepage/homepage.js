@@ -10,7 +10,7 @@ export default class Homepage extends React.Component {
 
   render() {
     const IMG_API = `https://image.tmdb.org/t/p/w1280`;
-    const movies = this.context.homepage;
+    const { movies = [] } = this.context || [];
     return (
       <div className="homepage">
         <div className="container">

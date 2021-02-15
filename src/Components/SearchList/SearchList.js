@@ -17,8 +17,8 @@ export default class SearchList extends React.Component {
 
   render() {
     const IMG_API = `https://image.tmdb.org/t/p/w1280`;
-    const movies = this.context.results;
-    const searchTerm = this.context.searchTerm;
+    const { movies = [] } = this.context || [];
+    const { searchTerm = "" } = this.context || "";
     return (
       <div className="searchlist">
         <h2>

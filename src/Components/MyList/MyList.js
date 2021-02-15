@@ -7,7 +7,7 @@ export default class MyList extends React.Component {
 
   render() {
     const IMG_API = `https://image.tmdb.org/t/p/w1280`;
-    const movies = this.context.movies;
+    const { movies = [] } = this.context || [];
     return (
       <div className="list">
         <h1>My List</h1>
