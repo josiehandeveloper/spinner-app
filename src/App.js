@@ -87,7 +87,7 @@ export default class App extends Component {
 
   componentDidMount() {
     this.state.getHomePage();
-    if (TokenService.hasAuthToken) {
+    if (TokenService.hasAuthToken()) {
       this.state.getUserMovies();
     }
   }
