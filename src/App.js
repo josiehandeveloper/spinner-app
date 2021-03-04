@@ -8,7 +8,7 @@ import SearchBar from "./Components/SearchBar/SearchBar";
 import SearchList from "./Components/SearchList/SearchList";
 import MyList from "./Components/MyList/MyList";
 import config from "./config";
-import TokenService from "./services/token-service";
+import TokenService from "./Services/token-service";
 import Homepage from "./Components/Homepage/Homepage";
 import Footer from "./Components/Footer/Footer";
 

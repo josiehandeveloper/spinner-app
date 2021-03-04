@@ -1,6 +1,6 @@
 import React from "react";
-import AuthAPIService from "../../services/auth-api-service";
-import TokenService from "../../services/token-service";
+import AuthAPIService from "../../Services/auth-api-service";
+import TokenService from "../../Services/token-service";
 import Context from "../../Context";
 import "./Login.css";
 
