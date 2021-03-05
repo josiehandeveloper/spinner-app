@@ -5,7 +5,8 @@ import "./NavBar.css";
 import TokenService from "../../services/token-service";
 
 export default class NavBar extends Component {
-  logout = () => {
+  logout = (e) => {
+    e.preventDefault();
     TokenService.clearAuthToken();
     this.props.history.push("/");
   };
@@ -23,13 +24,14 @@ export default class NavBar extends Component {
         )}
         {TokenService.hasAuthToken() ? (
           <div className="authLinks">
-            <Link
+            <a
               className="nav_logout"
               type="submit"
-              onClick={() => this.logout()}
+              href="/logout"
+              onClick={(e) => this.logout(e)}
             >
               Logout
-            </Link>
+            </a>
             <Link to="/dashboard" className="findMovies">
               Find Movies
             </Link>

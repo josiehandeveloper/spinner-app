@@ -1,6 +1,6 @@
 ## Watch It 
 
-https://watch-it-app.vercel.app/
+https://watchit-app-beta.vercel.app/
 
 ## API Documentation:
 
