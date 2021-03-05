@@ -8,11 +8,7 @@ import SearchBar from "./Components/SearchBar/SearchBar";
 import SearchList from "./Components/SearchList/SearchList";
 import MyList from "./Components/MyList/MyList";
 import config from "./config";
-<<<<<<< HEAD
 import TokenService from "./services/token-service";
-=======
-import TokenService from "./Services/token-service";
->>>>>>> b1a19868c2b62ff43d3909da0a7834ba471c4b70
 import Homepage from "./Components/Homepage/Homepage";
 import Footer from "./Components/Footer/Footer";
 
