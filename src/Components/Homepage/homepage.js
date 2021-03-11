@@ -9,7 +9,7 @@ export default class Homepage extends React.Component {
   };
 
   render() {
-    fetch("https://murmuring-crag-13918.herokuapp.com/api/test")
+    fetch("https://morning-reaches-89642.herokuapp.com/books")
       .then((res) => res.json())
       .then((data) => console.log(data));
     const IMG_API = `https://image.tmdb.org/t/p/w1280`;
