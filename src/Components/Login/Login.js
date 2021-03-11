@@ -14,6 +14,7 @@ export default class Login extends React.Component {
     const { email, password } = e.target;
     this.setState({ error: null });
     const user = { email: email.value, password: password.value };
+
     AuthAPIService.loginUser(user)
       .then((loginResponse) => {
         TokenService.saveAuthToken(loginResponse.authToken);
