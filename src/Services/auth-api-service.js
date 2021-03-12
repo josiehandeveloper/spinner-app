@@ -6,6 +6,8 @@ const AuthAPIService = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin":
+          "https://fierce-cove-59812.herokuapp.com/api/users",
       },
       body: JSON.stringify(user),
     }).then((res) =>
@@ -17,6 +19,8 @@ const AuthAPIService = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin":
+          "https://fierce-cove-59812.herokuapp.com/api/auth/login",
       },
       body: JSON.stringify(user),
     }).then((res) =>
