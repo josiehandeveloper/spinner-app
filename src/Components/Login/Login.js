@@ -1,6 +1,6 @@
 import React from "react";
-import AuthAPIService from "../../Services/auth-api-service";
 import TokenService from "../../Services/token-service";
+import AuthAPIService from "../../Services/auth-api-service";
 import Context from "../../Context";
 import "./Login.css";
 
@@ -14,7 +14,6 @@ export default class Login extends React.Component {
     const { email, password } = e.target;
     this.setState({ error: null });
     const user = { email: email.value, password: password.value };
-
     AuthAPIService.loginUser(user)
       .then((loginResponse) => {
         TokenService.saveAuthToken(loginResponse.authToken);
