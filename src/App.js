@@ -30,7 +30,7 @@ export default class App extends Component {
       const searchURL = `https://api.themoviedb.org/3/search/movie?api_key=${config.API_KEY}&query=${this.state.searchTerm}`;
       fetch(searchURL)
         .then((res) => res.json())
-        .then((data) => this.setState({ results: data.results }));
+        .then((data) => this.setState({ movies: data.results }));
     },
     /* For Searchbar */
     addMovieToList: (movie) => {
