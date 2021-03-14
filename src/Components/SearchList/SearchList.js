@@ -25,7 +25,7 @@ export default class SearchList extends React.Component {
           {results.length} Results for {searchTerm}:
         </h2>
         <div className="movie-container">
-          {movies
+          {results
             .filter((movie) => movie.poster_path)
             .map((movie) => (
               <div className="movie" key={movie.id}>
