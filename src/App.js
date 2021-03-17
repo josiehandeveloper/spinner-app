@@ -41,11 +41,10 @@ export default class App extends Component {
         },
         method: "POST",
         body: JSON.stringify(movie),
-      })
-        .then((res) => res.json())
-        .then((newMovie) => {
-          this.setState({ movies: [...this.state.movies, newMovie] });
-        });
+      }).then(() => this.state.getUserMovies());
+      // .then((newMovie) => {
+      //   this.setState({ movies: [...this.state.movies, newMovie] });
+      // });
     },
 
     deleteMovie: (movieId) => {
