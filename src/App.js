@@ -69,6 +69,7 @@ export default class App extends Component {
           Authorization: `Bearer ${TokenService.getAuthToken()}`,
           "Content-Type": "application/json",
         },
+        method: "GET",
       })
         .then((res) => res.json())
         .then((movies) => {
