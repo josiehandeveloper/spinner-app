@@ -17,15 +17,15 @@ export default class SearchList extends React.Component {
 
   render() {
     const IMG_API = `https://image.tmdb.org/t/p/w1280`;
-    const { results = [] } = this.context || [];
-    const { searchTerm = "" } = this.context || "";
+    const movies = this.context.results;
+    const searchTerm = this.context.searchTerm;
     return (
       <div className="searchlist">
         <h2>
-          {results.length} Results for {searchTerm}:
+          {movies.length} Results for {searchTerm}:
         </h2>
         <div className="movie-container">
-          {results
+          {movies
             .filter((movie) => movie.poster_path)
             .map((movie) => (
               <div className="movie" key={movie.id}>
