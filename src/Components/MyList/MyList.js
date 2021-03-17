@@ -14,7 +14,12 @@ export default class MyList extends React.Component {
         <div className="list-container">
           {movies.map((movie) => (
             <div className="movie" key={movie.id}>
-              <img alt="poster" width="250" src={IMG_API + movie.poster_path} />
+              <img
+                alt="poster"
+                width="250"
+                height="370"
+                src={IMG_API + movie.poster_path}
+              />
               <div className="movie-info">
                 <h3>{movie.title}</h3>
                 <p>Rating: {movie.vote_average}</p>
