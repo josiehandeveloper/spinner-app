@@ -71,9 +71,8 @@ export default class App extends Component {
         },
       })
         .then((res) => res.json())
-        .then((movies) => {
-          this.setState({ movies });
-          console.log(movies);
+        .then(({ movies: [] }) => {
+          this.setState({ movies: [] });
         });
     },
     /* Homepage */
