@@ -6,7 +6,7 @@ export default class MyList extends React.Component {
   static contextType = Context;
 
   render() {
-    const IMG_API = `https://image.tmdb.org/t/p/w1280`;
+    const IMG_API = `https://image.tmdb.org/t/p/w500`;
     const movies = this.context.movies;
     return (
       <div className="list">
