@@ -45,7 +45,6 @@ export default class App extends Component {
         .then((res) => res.json())
         .then((newMovie) => {
           this.setState({ movies: [...this.state.movies, newMovie] });
-          console.log(this.state.movies);
         });
     },
 
@@ -73,7 +72,7 @@ export default class App extends Component {
       })
         .then((res) => res.json())
         .then((movies) => {
-          this.setState({ movies: [] });
+          this.setState({ movies });
         });
     },
     /* Homepage */
