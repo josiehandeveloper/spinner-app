@@ -44,7 +44,7 @@ export default class App extends Component {
       })
         .then((res) => res.json())
         .then((newMovie) => {
-          this.setState({ movies: [...this.state.movies, newMovie] });
+          this.setState({ movies: [, newMovie, ...this.state.movies] });
         });
     },
 
@@ -65,6 +65,7 @@ export default class App extends Component {
     /* My List */
     getUserMovies: () => {
       fetch(`${config.API_ENDPOINT}/api/movies`, {
+        method: "GET",
         headers: {
           Authorization: `Bearer ${TokenService.getAuthToken()}`,
           "Content-Type": "application/json",
@@ -72,7 +73,7 @@ export default class App extends Component {
       })
         .then((res) => res.json())
         .then((movies) => {
-          this.setState({ movies: [] });
+          this.setState({ movies });
         });
     },
     /* Homepage */
