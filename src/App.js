@@ -45,7 +45,8 @@ export default class App extends Component {
         .then((res) => res.json())
         .then((newMovie) => {
           this.setState({ movies: [...this.state.movies, newMovie] });
-        });
+        })
+        .catch((e) => console.log(e));
     },
 
     deleteMovie: (movieId) => {
