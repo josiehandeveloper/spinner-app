@@ -74,7 +74,7 @@ export default class App extends Component {
       })
         .then((res) => res.json())
         .then((movies) => {
-          this.setState({ movies: [] });
+          this.setState({ movies });
         })
         .catch((error) => {
           console.error("Error:", error);
