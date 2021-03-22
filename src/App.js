@@ -16,15 +16,7 @@ export default class App extends Component {
   state = {
     searchTerm: "Harry Potter",
     results: [],
-    movies: [
-      {
-        datecreated: "2021-03-16T23:30:28.311Z",
-        id: 675,
-        title: "Harry Potter and the Order of the Phoenix",
-        poster_path: "/g6n8G0xPnBVUIKKK41sNmbZB5h4.jpg",
-        vote_average: "7.7",
-      },
-    ],
+    movies: [],
     homepage: [],
     setResults: (results) => {
       this.setState({ results });
