@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
-.nav {
+.nav_bar {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   display: flex;
@@ -29,11 +29,14 @@
   padding-left: 10px;
 }
 
-.nav_link {
+.nav_links {
   padding: 30px;
   font-family: Lato;
   font-weight: lighter;
   font-size: 18px;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
 }
 
 .nav_logout {
@@ -58,7 +61,7 @@ a:hover {
 }
 
 @media all and (max-width: 500px) {
-  .nav {
+  .nav_bar {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     display: flex;
@@ -84,8 +87,7 @@ a:hover {
     font-family: Lato;
     font-weight: lighter;
     font-size: 15px;
-  }
-  .findMovies {
-    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
   }
 }

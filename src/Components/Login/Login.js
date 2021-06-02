@@ -21,7 +21,7 @@ export default class Login extends React.Component {
         this.props.history.push("/dashboard");
       })
       .catch((res) => {
-        this.setState({ error: res.error });
+        this.setState(this.state.error);
       });
   };
 
