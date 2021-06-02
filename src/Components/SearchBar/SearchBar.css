@@ -10,6 +10,7 @@
   background-image: url(../../images/movie.png);
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 
 .search-container h1 {
