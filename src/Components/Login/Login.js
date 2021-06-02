@@ -39,7 +39,7 @@ export default class Login extends React.Component {
               className="email"
               id="user_email"
               name="email"
-              required=""
+              placeholder="testuser@testuser.com"
             />
 
             <label htmlFor="login_password">PASSWORD</label>
@@ -48,7 +48,7 @@ export default class Login extends React.Component {
               className="password"
               id="user_password"
               name="password"
-              required=""
+              placeholder="Testuser1!"
             />
 
             <button className="submit" type="submit" id="login_button">

@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Cardo&family=Quicksand&display=swap");
 
+.searchlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .searchlist h2 {
   font-family: lato;
   font-size: 40px;
@@ -7,7 +13,7 @@
   padding-left: 1em;
 }
 
-.movie-container {
+.searchlist-container {
   padding-top: 10%;
   display: flex;
   flex-wrap: wrap;
