@@ -7,7 +7,7 @@
   flex-direction: column;
   height: 75vh;
   position: relative;
-  background-image: url(../../images/movie.png);
+  background-image: url(../../../images/movie.png);
   background-position: center;
   padding: 0;
   margin: 0;
@@ -99,26 +99,21 @@
   overflow: hidden;
   padding: 10px 20px;
 }
-
 .releasedate {
   font-size: 16px;
 }
-
 .movie-info {
   font-family: lato;
   margin: 1rem;
   text-align: center;
 }
-
 .movie-info h3 {
   font-size: 20px;
   letter-spacing: 1px;
 }
-
 p {
   font-size: 18px;
 }
-
 @media all and (max-width: 500px) {
   .about p {
     font-size: 24px;
@@ -128,7 +123,7 @@ p {
     flex-direction: column;
     height: 75vh;
     position: relative;
-    background-image: url(../../images/movie.png);
+    background-image: url(../../../images/movie.png);
     background-position: center;
     padding: 0;
     margin: 0;
@@ -146,6 +141,7 @@ p {
   }
   .getstarted {
     position: absolute;
+
     top: 10%;
     bottom: 90%;
     font-family: Lato;

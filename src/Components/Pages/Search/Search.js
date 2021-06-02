@@ -1,6 +1,6 @@
 import React from "react";
-import SearchBar from "../../../SearchBar";
-import SearchList from "../../../SearchList";
+import SearchBar from "../../SearchBar/SearchBar";
+import SearchList from "../../SearchList/SearchList";
 
 function Search() {
   return (
