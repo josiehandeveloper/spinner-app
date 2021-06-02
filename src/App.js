@@ -3,13 +3,12 @@ import { Route } from "react-router-dom";
 import Context from "./Context";
 import NavBar from "./Components/NavBar/NavBar";
 import Register from "./Components/Register/Register";
-import Login from "./Components/Login/Login";
-import SearchBar from "./Components/SearchBar/SearchBar";
-import SearchList from "./Components/SearchList/SearchList";
+import Login from "./Components/Pages/Login/Login";
+import Search from "./Components/Pages/Search/Search";
 import MyList from "./Components/MyList/MyList";
 import config from "./config";
 import TokenService from "./Services/token-service";
-import Homepage from "./Components/Homepage/Homepage";
+import Homepage from "./Components/Pages/Homepage/Homepage";
 import Footer from "./Components/Footer/Footer";
 
 export default class App extends Component {
@@ -110,8 +109,7 @@ export default class App extends Component {
             <Route path="/register" component={Register} />
             <Route path="/login" component={Login} />
             <Route path="/movies" component={MyList} />
-            <Route path="/dashboard" component={SearchBar} />
-            <Route path="/dashboard" component={SearchList} />
+            <Route path="/dashboard" component={Search} />
           </main>
           <div className="App-footer">
             <Route path="/" component={Footer} />
