@@ -31,6 +31,17 @@ h1 {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+h4 {
+  text-align: left;
+  font-size: 13px;
+  width: 100%;
+  color: #111;
+  font-weight: lighter;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  line-height: 5px;
+}
+
 label {
   font-size: 0.8em;
   margin-bottom: 0.25em;
@@ -75,6 +86,14 @@ input {
 
 .submit:hover {
   color: #383838;
+}
+
+.register-link {
+  padding-top: 7px;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 @media all and (max-width: 500px) {

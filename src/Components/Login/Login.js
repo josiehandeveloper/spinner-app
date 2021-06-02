@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import TokenService from "../../Services/token-service";
 import AuthAPIService from "../../Services/auth-api-service";
 import Context from "../../Context";
@@ -30,6 +31,7 @@ export default class Login extends React.Component {
       <div className="wrapper">
         <div className="form-wrapper">
           <h1>Login</h1>
+          <h4>Demo: Email: testuser@testuser.com Password: Testuser1!</h4>
           <form className="login_form" onSubmit={this.handleLogin}>
             {this.state.error && <p className="error">{this.state.error}</p>}
 
@@ -39,7 +41,6 @@ export default class Login extends React.Component {
               className="email"
               id="user_email"
               name="email"
-              placeholder="testuser@testuser.com"
             />
 
             <label htmlFor="login_password">PASSWORD</label>
@@ -48,13 +49,16 @@ export default class Login extends React.Component {
               className="password"
               id="user_password"
               name="password"
-              placeholder="Testuser1!"
             />
 
             <button className="submit" type="submit" id="login_button">
               SUBMIT
             </button>
           </form>
+
+          <Link to="/register" className="register-link">
+            REGISTER
+          </Link>
         </div>
       </div>
     );
