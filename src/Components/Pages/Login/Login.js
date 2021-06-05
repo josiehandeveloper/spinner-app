@@ -2,14 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import TokenService from "../../../Services/token-service";
 import AuthAPIService from "../../../Services/auth-api-service";
-import Context from "../../../Context";
 import "./Login.css";
 
 export default class Login extends React.Component {
-  static contextType = Context;
-  state = {
-    error: null,
-  };
   handleLogin = (e) => {
     e.preventDefault();
     const { email, password } = e.target;

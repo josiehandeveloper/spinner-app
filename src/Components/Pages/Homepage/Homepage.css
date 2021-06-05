@@ -5,7 +5,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 75vh;
+  height: 60vh;
   position: relative;
   background-image: url(../../../images/movie.png);
   background-position: center;
@@ -82,12 +82,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 7px 10px;
-}
-
-.img {
-  max-width: 100%;
-  padding-right: 5px;
+  padding: 5em 4px;
 }
 
 .movie {
@@ -95,25 +90,28 @@
   margin: 1rem;
   width: 250px;
   border-radius: 3px;
-  box-shadow: 3 px 3 px 5 px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   padding: 10px 20px;
 }
-.releasedate {
+
+.movie-image {
+  border-radius: 10px;
+}
+
+.movie-title {
   font-size: 16px;
 }
-.movie-info {
-  font-family: lato;
-  margin: 1rem;
+
+.release_date {
   text-align: center;
+  font-size: 15px;
 }
-.movie-info h3 {
-  font-size: 20px;
-  letter-spacing: 1px;
+
+.rating {
+  text-align: center;
+  font-size: 15px;
 }
-p {
-  font-size: 18px;
-}
+
 @media all and (max-width: 500px) {
   .about p {
     font-size: 24px;

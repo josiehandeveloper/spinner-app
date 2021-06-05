@@ -1,56 +1,29 @@
 import React from "react";
-import Context from "../../Context";
 import "./SearchList.css";
 
-export default class SearchList extends React.Component {
-  static contextType = Context;
-
-  state = {
-    isToggleOn: false,
-  };
-
-  handleClick() {
-    this.setState((state) => ({
-      isToggleOn: !state.isToggleOn,
-    }));
-  }
-
-  render() {
-    const IMG_API = `https://image.tmdb.org/t/p/w500`;
-    const { results = [] } = this.context || [];
-    const { searchTerm = "" } = this.context || "";
-    return (
-      <div className="searchlist">
-        <h2>
-          {results.length} Results for {searchTerm}:
-        </h2>
-        <div className="movie-container">
-          {results
-            .filter((movie) => movie.poster_path)
-            .map((movie) => (
-              <div className="movie" key={movie.id}>
-                <img
-                  className="movie-image"
-                  alt="poster"
-                  width="250"
-                  height="370"
-                  src={IMG_API + movie.poster_path}
-                />
-                <div className="movie-info">
-                  <h3 className="movie-title">{movie.title}</h3>
-                  <p>Rating: {movie.vote_average}</p>
-
-                  <button
-                    className="addbtn"
-                    onClick={() => this.context.addMovieToList(movie)}
-                  >
-                    Add to My List
-                  </button>
-                </div>
-              </div>
-            ))}
-        </div>
+function SearchList({ movie }) {
+  return (
+    <div className="movie-card">
+      <div className="poster-wrapper">
+        {movie.poster_path ? (
+          <img
+            className="movie-image"
+            alt={`${movie.title} poster`}
+            width="250"
+            height="370"
+            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+          />
+        ) : (
+          <div className="filler-poster" />
+        )}
       </div>
-    );
-  }
+      <div className="movie-info">
+        <h3 className="movie-title"> {movie.title}</h3>
+        <h4 className="release_date">
+          {movie.release_date ? movie.release_date.substring(0, 4) : "-"}
+        </h4>
+      </div>
+    </div>
+  );
 }
+export default SearchList;
