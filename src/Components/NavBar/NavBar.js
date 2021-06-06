@@ -27,9 +27,11 @@ export default class NavBar extends Component {
             >
               Logout
             </a>
-
             <Link to="/movies" className="mylist">
               My List
+            </Link>
+            <Link to="/dashboard" className="findMovies">
+              Find Movies
             </Link>
           </div>
         ) : (

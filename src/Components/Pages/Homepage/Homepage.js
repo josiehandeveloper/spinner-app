@@ -4,8 +4,8 @@ import "./Homepage.css";
 
 export default class Homepage extends React.Component {
   static contextType = Context;
-  register = () => {
-    this.props.history.push("/register");
+  login = () => {
+    this.props.history.push("/login");
   };
 
   render() {
@@ -15,7 +15,7 @@ export default class Homepage extends React.Component {
       <div className="homepage">
         <div className="container">
           <h1> Welcome to Watch It</h1>
-          <button className="getstarted" onClick={() => this.register()}>
+          <button className="getstarted" onClick={() => this.login()}>
             Let's Get Started
           </button>
         </div>
