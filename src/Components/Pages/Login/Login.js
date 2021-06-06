@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import TokenService from "../../../Services/token-service";
 import AuthAPIService from "../../../Services/auth-api-service";
 import Context from "../../../Context";
@@ -30,6 +31,9 @@ export default class Login extends React.Component {
       <div className="wrapper">
         <div className="form-wrapper">
           <h1>Login</h1>
+          <h4 className="demoLogin">
+            Email: testuser@testuser.com Password: Testuser1!
+          </h4>
           <form className="login_form" onSubmit={this.handleLogin}>
             {this.state.error && <p className="error">{this.state.error}</p>}
 
@@ -55,6 +59,7 @@ export default class Login extends React.Component {
               SUBMIT
             </button>
           </form>
+          <Link className="register-link"> Don't have an account yet?</Link>
         </div>
       </div>
     );
