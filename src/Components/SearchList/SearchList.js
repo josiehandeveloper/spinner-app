@@ -21,9 +21,6 @@ export default class SearchList extends React.Component {
     const { searchTerm = "" } = this.context || "";
     return (
       <div className="searchlist">
-        <h2>
-          {results.length} Results for {searchTerm}:
-        </h2>
         <div className="movie-container">
           {results
             .filter((movie) => movie.poster_path)
