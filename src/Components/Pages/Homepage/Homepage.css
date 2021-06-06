@@ -5,7 +5,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 60vh;
+  height: 50vh;
   position: relative;
   background-image: url(../../../images/movie.png);
   background-position: center;
@@ -110,6 +110,22 @@
 .rating {
   text-align: center;
   font-size: 15px;
+}
+
+.addButton {
+  background-color: #749e86;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: #749e86;
+  width: 100%;
+  margin-top: 1em;
+  padding: 8px 0px;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-bottom: 0.25em;
+  cursor: pointer;
+  transition: color 250ms;
 }
 
 @media all and (max-width: 500px) {
