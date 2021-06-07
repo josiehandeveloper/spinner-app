@@ -59,7 +59,10 @@ export default class Login extends React.Component {
               SUBMIT
             </button>
           </form>
-          <Link className="register-link"> Don't have an account yet?</Link>
+          <Link to="/register" className="register-link">
+            {" "}
+            Don't have an account yet?
+          </Link>
         </div>
       </div>
     );
