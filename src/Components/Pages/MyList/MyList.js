@@ -2,9 +2,12 @@ import React from "react";
 import "./MyList.css";
 
 export default class MyList extends React.Component {
+  static contextType = Context;
+
   render() {
     const IMG_API = `https://image.tmdb.org/t/p/w500`;
-    const { movies = [] } = this.context.movies || [];
+    const { movies = [] } = this.context || [];
+
     return (
       <div className="list">
         <h1>My List</h1>
