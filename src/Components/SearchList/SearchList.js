@@ -35,8 +35,12 @@ export default class SearchList extends React.Component {
                 />
                 <div className="movie-info">
                   <h3 className="movie-title">{movie.title}</h3>
-                  <p>Rating: {movie.vote_average}</p>
-
+                  <p>
+                    <small> {movie.release_date.substring(0, 4)}</small>
+                  </p>
+                  <p>
+                    <small>Rating: {movie.vote_average}</small>
+                  </p>
                   <button
                     className="addbtn"
                     onClick={() => this.context.addMovieToList(movie)}

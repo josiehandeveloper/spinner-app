@@ -42,7 +42,7 @@ export default class Homepage extends React.Component {
               <div className="movie-info">
                 <h3 className="movie-title">{movie.title}</h3>
                 <p>
-                  <small>Release Date: {movie.release_date}</small>
+                  <small> {movie.release_date.substring(0, 4)}</small>
                 </p>
                 <p>
                   <small>Rating: {movie.vote_average}</small>
