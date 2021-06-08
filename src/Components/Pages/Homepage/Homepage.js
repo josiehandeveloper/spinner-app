@@ -48,6 +48,12 @@ export default class Homepage extends React.Component {
                   <small>Rating: {movie.vote_average}</small>
                 </p>
               </div>
+              <button
+                className="addbtn"
+                onClick={() => this.context.addMovieToList(movie)}
+              >
+                Add to My List
+              </button>
             </div>
           ))}
         </div>
