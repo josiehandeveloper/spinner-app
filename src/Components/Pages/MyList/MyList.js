@@ -4,7 +4,7 @@ import "./MyList.css";
 export default class MyList extends React.Component {
   render() {
     const IMG_API = `https://image.tmdb.org/t/p/w500`;
-    const { movies = [] } = this.context || [];
+    const { movies = [] } = this.context.movies || [];
     return (
       <div className="list">
         <h1>My List</h1>

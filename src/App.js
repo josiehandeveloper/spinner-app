@@ -77,7 +77,7 @@ export default class App extends Component {
           this.setState({ movies });
         })
         .catch((error) => {
-          console.error("Error:", error);
+          console.error(error);
         });
     },
     /* Homepage */
