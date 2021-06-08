@@ -1,4 +1,5 @@
 import React from "react";
+import Context from "../../Context";
 import "./MyList.css";
 
 export default class MyList extends React.Component {
