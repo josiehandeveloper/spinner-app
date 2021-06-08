@@ -1,5 +1,6 @@
 import React from "react";
 import Context from "../../Context";
+import TokenService from "../../Services/token-service";
 import "./SearchList.css";
 
 export default class SearchList extends React.Component {
@@ -41,12 +42,18 @@ export default class SearchList extends React.Component {
                   <p>
                     <small>Rating: {movie.vote_average}</small>
                   </p>
-                  <button
-                    className="addbtn"
-                    onClick={() => this.context.addMovieToList(movie)}
-                  >
-                    Add to My List
-                  </button>
+                  {TokenService.hasAuthToken() ? (
+                    <button
+                      className="addbtn"
+                      onClick={() => this.context.addMovieToList(movie)}
+                    >
+                      Add to My List
+                    </button>
+                  ) : (
+                    <button className="addbtn" onClick={() => this.login()}>
+                      Add to My List
+                    </button>
+                  )}
                 </div>
               </div>
             ))}
