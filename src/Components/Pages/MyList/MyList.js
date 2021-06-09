@@ -26,9 +26,6 @@ export default class MyList extends React.Component {
               <div className="movie-info">
                 <h3 className="movie-title">{movie.title}</h3>
                 <p>
-                  <small> {movie.release_date.substring(0, 4)}</small>
-                </p>
-                <p>
                   <small>Rating: {movie.vote_average}</small>
                 </p>
               </div>
