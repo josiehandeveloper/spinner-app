@@ -15,12 +15,6 @@
   padding: 5em 4px;
 }
 
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-padding: 5em 4px;
-
 .img {
   max-width: 100%;
   padding-right: 5px;
