@@ -16,22 +16,29 @@ export default class MyList extends React.Component {
           {movies.map((movie) => (
             <div className="movie" key={movie.id}>
               <img
+                className="movie-image"
                 alt="poster"
                 width="250"
                 height="370"
                 src={IMG_API + movie.poster_path}
               />
-              <div className="movie-info">
-                <h3>{movie.title}</h3>
-                <p>Rating: {movie.vote_average}</p>
 
-                <button
-                  className="deletebtn"
-                  onClick={() => this.context.deleteMovie(movie.id)}
-                >
-                  Delete
-                </button>
+              <div className="movie-info">
+                <h3 className="movie-title">{movie.title}</h3>
+                <p>
+                  <small> {movie.release_date.substring(0, 4)}</small>
+                </p>
+                <p>
+                  <small>Rating: {movie.vote_average}</small>
+                </p>
               </div>
+
+              <button
+                className="deletebtn"
+                onClick={() => this.context.deleteMovie(movie.id)}
+              >
+                Delete
+              </button>
             </div>
           ))}
         </div>
