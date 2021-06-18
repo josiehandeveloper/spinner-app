@@ -86,14 +86,14 @@ a:hover {
   .authLinks {
     font-family: "lato", sans-serif;
     font-weight: lighter;
-    font-size: 15px;
+    font-size: 12px;
     margin-left: -5rem;
   }
   .nav_link {
-    padding: 30px;
+    padding: 30px 10px;
     font-family: Lato;
     font-weight: lighter;
-    font-size: 15px;
+    font-size: 14px;
   }
   .findMovies {
     padding-right: 10px;
