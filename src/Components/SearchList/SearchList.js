@@ -5,6 +5,9 @@ import "./SearchList.css";
 
 export default class SearchList extends React.Component {
   static contextType = Context;
+  login = () => {
+    this.props.history.push("/login");
+  };
 
   state = {
     isToggleOn: false,

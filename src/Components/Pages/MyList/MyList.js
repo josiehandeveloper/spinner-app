@@ -4,9 +4,6 @@ import "./MyList.css";
 
 export default class MyList extends React.Component {
   static contextType = Context;
-  login = () => {
-    this.props.history.push("/login");
-  };
 
   render() {
     const IMG_API = `https://image.tmdb.org/t/p/w500`;
