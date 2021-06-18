@@ -46,7 +46,7 @@
   transition: color 250ms;
 }
 .getstarted:hover {
-  color: #383838;
+  color: #749e86;
 }
 
 .about h1 {
@@ -155,7 +155,6 @@
   }
   .getstarted {
     position: absolute;
-
     top: 10%;
     bottom: 90%;
     font-family: Lato;
