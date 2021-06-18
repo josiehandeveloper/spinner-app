@@ -59,10 +59,9 @@
 .about p {
   font-family: lato;
   color: black;
-  font-size: 40px;
+  font-size: 30px;
   text-align: left;
-  margin-left: 6rem;
-  margin-right: 6rem;
+  margin: 0 5rem;
 }
 
 .line-top {
@@ -130,7 +129,11 @@
 
 @media all and (max-width: 500px) {
   .about p {
-    font-size: 24px;
+    font-size: 23px;
+    font-family: lato;
+    color: black;
+    text-align: left;
+    margin: 0 3rem;
   }
   .container {
     display: flex;
